@@ -2,6 +2,11 @@
   background-color: rgba(41, 172, 65, 0.849);
   position: absolute;
   float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .previousButton {
   
@@ -10,6 +15,11 @@
   background-color: rgba(63, 194, 87, 0.973);
   position: absolute;
   float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .nextButton {
   height: 50px;
@@ -17,6 +27,11 @@
   background-color: rgba(63, 194, 87, 0.973);
   position: absolute;
   float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .shuffleButton {
   height: 40px;
@@ -24,6 +39,11 @@
   background-color: rgba(67, 204, 92, 0.973);
   position: absolute;
   float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .replayButton {
   height: 40px;
@@ -31,4 +51,9 @@
   background-color: rgba(67, 204, 92, 0.973);
   position: absolute;
   float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
