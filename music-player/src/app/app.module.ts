@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { MusicControlsComponent } from './music-controls/music-controls.component';
+import { BrowserComponent } from './browser/browser.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MusicControlsComponent,
+    BrowserComponent
   ],
   imports: [
     BrowserModule
