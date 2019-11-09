@@ -9,7 +9,7 @@ import * as WaveSurfer from 'wavesurfer.js';
 export class MusicControlsComponent implements OnInit {
 
   constructor() { }
-
+  isRepeating:boolean=false;
   wavesurfer: any;
 
   ngOnInit() {
@@ -25,6 +25,22 @@ export class MusicControlsComponent implements OnInit {
 
   onPlayClick() {
     this.wavesurfer.playPause();
+  }
+
+  onRepeat()
+  {
+    this.isRepeating = !this.isRepeating;
+    if(this.isRepeating)
+    {
+      this.wavesurfer.on('finish', () =>{
+        this.wavesurfer.stop();
+        this.wavesurfer.playPause();
+      });
+    }
+    else
+    {
+      this.wavesurfer.un('finish');
+    }
   }
 
 }
