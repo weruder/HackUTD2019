@@ -21,7 +21,7 @@
     <i class="material-icons" style="font-size: 15px">
         shuffle
     </i></button>
-<button mat-fab aria-label="Another button number 4" class="replayButton" (click)="onRepeat()">
+<button mat-fab aria-label="Another button number 4" class="replayButton" [ngClass]="isRepeating ? 'clicked' : 'unclicked'" (click)="onRepeat()">
     <i class="material-icons" style="font-size: 15px">
         replay
     </i>
