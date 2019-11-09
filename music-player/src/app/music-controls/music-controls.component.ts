@@ -16,7 +16,9 @@ export class MusicControlsComponent implements OnInit {
     this.wavesurfer = WaveSurfer.create({
       container: '#waveform',
       waveColor: 'green',
-      progressColor: 'darkgreen'
+      progressColor: 'darkgreen',
+      barWidth: 2,
+      barGap:1
     });
 
     this.wavesurfer.load('https://archive.org/download/SweetDreams_302/Eurythmics-SweetDreams.mp3');
