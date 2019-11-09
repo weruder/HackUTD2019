@@ -10,14 +10,21 @@ export class MusicControlsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    var wavesurfer = WaveSurfer.create({
-      container: '#waveform',
-      waveColor: 'violet',
-      progressColor: 'purple'
-  });
+  wavesurfer: any;
 
-  wavesurfer.load('http://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3');
+  ngOnInit() {
+    this.wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: 'green',
+      progressColor: 'darkgreen'
+    });
+
+    this.wavesurfer.load('https://archive.org/download/SweetDreams_302/Eurythmics-SweetDreams.mp3');
+    this.wavesurfer.setHeight(50);
+  }
+
+  onPlayClick() {
+    this.wavesurfer.playPause();
   }
 
 }
