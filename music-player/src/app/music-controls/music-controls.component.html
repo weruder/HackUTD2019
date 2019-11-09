@@ -4,16 +4,19 @@
 
 <button mat-fab class="playButton" (click)="onPlayClick()">
     <i class="material-icons">
-        play_arrow
-    </i></button>
+        {{ wavesurfer.isPlaying() ? 'pause' : 'play_arrow' }}
+    </i>
+</button>
 <button mat-fab aria-label="Another button number 1" class="previousButton">
     <i class="material-icons" style="font-size: 20px">
         skip_previous
-    </i></button>
+    </i>
+</button>
 <button mat-fab aria-label="Another button number 2" class="nextButton">
     <i class="material-icons" style="font-size: 20px">
         skip_next
-    </i></button>
+    </i>
+</button>
 <button mat-fab aria-label="Another button number 3" class="shuffleButton">
     <i class="material-icons" style="font-size: 15px">
         shuffle
@@ -21,4 +24,5 @@
 <button mat-fab aria-label="Another button number 4" class="replayButton" (click)="onRepeat()">
     <i class="material-icons" style="font-size: 15px">
         replay
-    </i></button>
+    </i>
+</button>
