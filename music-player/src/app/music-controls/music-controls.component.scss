@@ -1,52 +1,67 @@
 .playButton {
-  padding: 0 6px 0 6px;
-  margin: 6px 8px 6px 8px;
-  background-color: rgba(41, 172, 65, 0.849);
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
   position: absolute;
-  left: 50%;
-  top: 50%;
+  float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .previousButton {
-  padding: 0 4px 0 4px;
-  margin: 5px 6px 5px 6px;
+  
   height: 50px;
   width: 50px;
-  background-color: rgba(63, 194, 87, 0.973);
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
   position: absolute;
-  left: 45%;
-  top: 50%;
+  float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .nextButton {
-  padding: 0 4px 0 4px;
-  margin: 5px 6px 5px 6px;
   height: 50px;
   width: 50px;
-  background-color: rgba(63, 194, 87, 0.973);
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
   position: absolute;
-  left: 55%;
-  top: 50%;
+  float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .shuffleButton {
-  padding: 0 4px 0 4px;
-  margin: 5px 6px 5px 6px;
   height: 40px;
   width: 40px;
-  background-color: rgba(67, 204, 92, 0.973);
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
   position: absolute;
-  left: 41%;
-  top: 50%;
+  float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 .replayButton {
-  padding: 0 4px 0 4px;
-  margin: 5px 6px 5px 6px;
   height: 40px;
   width: 40px;
-  background-color: rgba(67, 204, 92, 0.973);
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
   position: absolute;
-  left: 59.5%;
-  top: 50%;
+  float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
 }
 
 .clicked {
     background-color: rgba(31, 87, 17, 0.973);
+}
+
+mat-slider {
+  width: 300px;
 }
