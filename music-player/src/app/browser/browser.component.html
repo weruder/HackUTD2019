@@ -1,1 +1,5 @@
-<p>browser works!</p>
+<mat-nav-list>
+    <mat-list-item *ngFor="let song of playlist" (click)="onListItemClick(song)">
+        {{ song }}
+    </mat-list-item>
+</mat-nav-list>

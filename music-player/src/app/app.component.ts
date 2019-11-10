@@ -9,8 +9,13 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'music-player';
+  selectedSong: string;
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+
+  onSelectedSong(event) {
+    this.selectedSong = event;
   }
 }

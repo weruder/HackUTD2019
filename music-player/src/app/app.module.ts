@@ -6,10 +6,11 @@ import { MusicControlsComponent } from './music-controls/music-controls.componen
 import { BrowserComponent } from './browser/browser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-
+import { MatListModule } from '@angular/material/list'; 
 
 const routes: Routes = [
-  { path: 'test', component: MusicControlsComponent }
+  { path: 'test', component: MusicControlsComponent },
+  { path: 'browser', component: BrowserComponent }
 ];
 
 @NgModule({
@@ -21,6 +22,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     MatButtonModule,
+    MatListModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],

@@ -5,6 +5,10 @@
   <span>Welcome</span>
   <div class="spacer"></div>
 </div>
+
+<app-music-controls [selectedSong]="selectedSong"></app-music-controls>
+<app-browser (selectedSong)="onSelectedSong($event)"></app-browser>
+
 <div [@routeAnimations]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </div>

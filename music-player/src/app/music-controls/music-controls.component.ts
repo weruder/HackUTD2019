@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as WaveSurfer from 'wavesurfer.js';
 
 @Component({
@@ -9,6 +9,11 @@ import * as WaveSurfer from 'wavesurfer.js';
 export class MusicControlsComponent implements OnInit {
 
   constructor() { }
+  @Input()
+  set selectedSong(val: any) {
+    console.log("Test");
+    this.wavesurfer.load(val);
+  }
   isRepeating:boolean=false;
   wavesurfer: any;
 
