@@ -53,4 +53,8 @@ export class MusicControlsComponent implements OnInit {
   {
     this.wavesurfer.setVolume(volume);
   }
+  onPlayMute()
+  {
+    this.wavesurfer.toggleMute();
+  }
 }
