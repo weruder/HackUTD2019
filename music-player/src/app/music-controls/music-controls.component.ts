@@ -15,6 +15,7 @@ export class MusicControlsComponent implements OnInit {
     this.wavesurfer.load(val);
   }
   isRepeating:boolean=false;
+  isMuted:boolean=false;
   wavesurfer: any;
 
   ngOnInit() {
@@ -51,10 +52,16 @@ export class MusicControlsComponent implements OnInit {
   }
   onVolumeChange(volume:number)
   {
+    if(this.isMuted&&volume!=0)
+    {
+      this.isMuted=!this.isMuted;
+      this.wavesurfer.toggleMute();
+    }
     this.wavesurfer.setVolume(volume);
   }
-  onPlayMute()
+  onMute()
   {
-    this.wavesurfer.toggleMute();
+    this.isMuted=!this.isMuted;
+    this.wavesurfer.toggleMute()
   }
 }

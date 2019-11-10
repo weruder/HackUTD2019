@@ -7,9 +7,9 @@
 <div style="text-align:center; width:100%;display:inline-block; max-height: 70px; vertical-align: middle;">
     <div class="spaceTaker">
         <div style="display:inline-block; min-width: 50px;min-height: 50px;text-align:left;margin:3px">
-            <button mat-fab aria-label="Another button number 7" class="muteButton">
+            <button mat-fab aria-label="Another button number 7" class="muteButton" (click) = onMute()>
                 <i class="material-icons" style="font-size: 15px">
-                    {{ wavesurfer.getMute() ? 'volume_off' : 'volume_up' }}
+                    {{ isMuted ? 'volume_off' : 'volume_up' }}
                 </i>
             </button>
         </div>
