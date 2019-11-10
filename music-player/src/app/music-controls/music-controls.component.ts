@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import * as WaveSurfer from 'wavesurfer.js';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-music-controls',
@@ -11,10 +12,10 @@ export class MusicControlsComponent implements OnInit {
   constructor() { }
   @Input()
   set selectedSong(val: any) {
-    console.log("Test");
     this.wavesurfer.load(val);
   }
-  isRepeating:boolean=false;
+  @Output() nextTrack = new EventEmitter();
+  isRepeating: boolean = false;
   wavesurfer: any;
 
   ngOnInit() {
@@ -23,10 +24,9 @@ export class MusicControlsComponent implements OnInit {
       waveColor: '#21fc45',
       progressColor: 'green',
       barWidth: 2,
-      barGap:1
+      barGap: 1
     });
 
-    this.wavesurfer.load('https://archive.org/download/SweetDreams_302/Eurythmics-SweetDreams.mp3');
     this.wavesurfer.setHeight(50);
   }
 
@@ -34,23 +34,23 @@ export class MusicControlsComponent implements OnInit {
     this.wavesurfer.playPause();
   }
 
-  onRepeat()
-  {
+  onRepeat() {
     this.isRepeating = !this.isRepeating;
-    if(this.isRepeating)
-    {
-      this.wavesurfer.on('finish', () =>{
+    if (this.isRepeating) {
+      this.wavesurfer.on('finish', () => {
         this.wavesurfer.stop();
         this.wavesurfer.playPause();
       });
     }
-    else
-    {
+    else {
       this.wavesurfer.un('finish');
     }
   }
-  onVolumeChange(volume:number)
-  {
+  onVolumeChange(volume: number) {
     this.wavesurfer.setVolume(volume);
+  }
+
+  onNextTrackClick() {
+    this.nextTrack.emit();
   }
 }

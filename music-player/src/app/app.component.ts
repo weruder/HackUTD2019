@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BrowserService } from './services/browser.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent {
+  constructor(private browserService: BrowserService) { }
   title = 'music-player';
-  selectedSong: string;
+  selectedSong: String;
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
@@ -17,5 +19,11 @@ export class AppComponent {
 
   onSelectedSong(event) {
     this.selectedSong = event;
+  }
+
+  onNextTrack() {
+    console.log("Going to next track?");
+    this.browserService.setCurrentSong(this.browserService.getNextSongPosition());
+    this.selectedSong = this.browserService.getCurrentSong();
   }
 }
