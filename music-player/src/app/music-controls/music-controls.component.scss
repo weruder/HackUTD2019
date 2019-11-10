@@ -1,18 +1,20 @@
 .playButton {
-  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44,.7), rgb(6, 82, 4,.7));
   position: absolute;
   float: left;
-
+  background-color:green;
+  transition: .4s;
   &::ng-deep .mat-button-wrapper{
     line-height: 14px;
     padding: 0;
   }
 }
 .previousButton {
-  
+  background-color:green;
+  transition: .4s;
   height: 50px;
   width: 50px;
-  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44,.7), rgb(6, 82, 4,.7));
   position: absolute;
   float: left;
 
@@ -22,9 +24,11 @@
   }
 }
 .nextButton {
+  background-color:green;
+  transition: .4s;
   height: 50px;
   width: 50px;
-  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44,.7), rgb(6, 82, 4,.7));
   position: absolute;
   float: left;
 
@@ -34,9 +38,11 @@
   }
 }
 .shuffleButton {
+  background-color:green;
+  transition: .4s;
   height: 40px;
   width: 40px;
-  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44,.7), rgb(6, 82, 4,.7));
   position: absolute;
   float: left;
 
@@ -46,9 +52,11 @@
   }
 }
 .replayButton {
+  background-color:green;
+  transition: .4s;
   height: 40px;
   width: 40px;
-  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44), rgb(6, 82, 4));
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44,.7), rgb(6, 82, 4,.7));
   position: absolute;
   float: left;
 
@@ -65,4 +73,10 @@
 
 mat-slider {
   width: 300px;
+}
+
+.playButton:hover, .previousButton:hover, .nextButton:hover, .shuffleButton:hover, .replayButton:hover{
+  background-color:rgb(0, 235, 0);
+  box-shadow:
+        0 3px 10px 5px rgb(10, 88, 0);
 }
