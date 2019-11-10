@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "angular-file-uploader": "^5.0.2",
     "angular-hammer": "^2.2.0",
     "hammerjs": "^2.0.8",
     "music-metadata": "^4.8.4",

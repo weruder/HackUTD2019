@@ -23,4 +23,8 @@ export class BrowserComponent implements OnInit {
     this.selectedSong.emit(song);
   }
 
+  handleFileInput(files: Array<File>) {
+    console.log(files);
+  }
+
 }

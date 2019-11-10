@@ -7,7 +7,8 @@ import { BrowserComponent } from './browser/browser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { MatListModule } from '@angular/material/list'; 
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 const routes: Routes = [
   { path: 'test', component: MusicControlsComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
     MatListModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    AngularFileUploaderModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
