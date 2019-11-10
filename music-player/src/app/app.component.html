@@ -1,11 +1,14 @@
-<!-- Toolbar -->
 <div class="body_wrapper">
   <div class="toolbar" role="banner">
     <span style="margin-left:115px; color: rgb(221, 221, 221); font-size: 20px;">Welcome To Green Machine Audio:</span>
-    <span style="margin-left:-110px; margin-top: 35px; color: rgb(206, 206, 206); font-size: 13px; vertical-align:bottom"><sub>A Spotify
+    <span
+      style="margin-left:-110px; margin-top: 35px; color: rgb(206, 206, 206); font-size: 13px; vertical-align:bottom"><sub>A
+        Spotify
         Ripoff, But Worse</sub></span>
     <div class="spacer"></div>
   </div>
+  <app-music-controls [selectedSong]="selectedSong"></app-music-controls>
+  <app-browser (selectedSong)="onSelectedSong($event)"></app-browser>
   <div [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
