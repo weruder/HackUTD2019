@@ -49,5 +49,8 @@ export class MusicControlsComponent implements OnInit {
       this.wavesurfer.un('finish');
     }
   }
-
+  onVolumeChange(volume:number)
+  {
+    this.wavesurfer.setVolume(volume);
+  }
 }
