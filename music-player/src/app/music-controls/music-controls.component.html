@@ -5,6 +5,11 @@
 </div>
 
 <div style="text-align:center; width:100%;display:inline-block; max-height: 70px; vertical-align: middle;">
+    <div class="spaceTaker">
+        <mat-slider min="0" max="1" step="0.05" value="1" (change)="onVolumeChange($event.value)">
+        </mat-slider>
+    </div>
+    <div style="display:inline-block; margin:auto;">
     <div style="display:inline-block;min-width: 40px;min-height: 40px;text-align:left;margin:2px">
         <button mat-fab aria-label="Another button number 3" class="shuffleButton">
             <i class="material-icons" style="font-size: 15px">
@@ -41,5 +46,5 @@
         </button>
     </div>
 </div>
-<mat-slider min="0" max="1" step="0.05" value="0.5" (change)="onVolumeChange($event.value)">
-</mat-slider>
+    <div class="spaceTaker"></div>
+</div>
