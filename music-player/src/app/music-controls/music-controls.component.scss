@@ -23,6 +23,21 @@
     padding: 0;
   }
 }
+.muteButton {
+  z-index: 2;
+  background-color:green;
+  transition: .4s;
+  height: 50px;
+  width: 50px;
+  background-image: radial-gradient(circle at center 30%, rgb(48, 185, 44,.7), rgb(6, 82, 4,.7));
+  position: absolute;
+  float: left;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+  }
+}
 .nextButton {
   background-color:green;
   transition: .4s;
