@@ -11,6 +11,7 @@ export class BrowserComponent implements OnInit {
   constructor() { }
   @Output() selectedSong = new EventEmitter();
   playlist: Array<String>;
+  currentSongPosition: number = 0;
 
   ngOnInit() {
     this.playlist = new Array<String>();
@@ -21,6 +22,7 @@ export class BrowserComponent implements OnInit {
 
   onListItemClick(song: string) {
     this.selectedSong.emit(song);
+    this.currentSongPosition = this.playlist.indexOf(song);
   }
 
 }
