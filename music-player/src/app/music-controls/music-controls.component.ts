@@ -57,6 +57,11 @@ export class MusicControlsComponent implements OnInit {
       this.isMuted=!this.isMuted;
       this.wavesurfer.toggleMute();
     }
+    else if(volume == 0 && !this.isMuted)
+    {
+      this.isMuted=!this.isMuted;
+      this.wavesurfer.toggleMute();
+    } 
     this.wavesurfer.setVolume(volume);
   }
   onMute()
