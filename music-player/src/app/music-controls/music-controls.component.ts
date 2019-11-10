@@ -15,8 +15,8 @@ export class MusicControlsComponent implements OnInit {
   ngOnInit() {
     this.wavesurfer = WaveSurfer.create({
       container: '#waveform',
-      waveColor: 'green',
-      progressColor: 'darkgreen',
+      waveColor: '#21fc45',
+      progressColor: 'green',
       barWidth: 2,
       barGap:1
     });
